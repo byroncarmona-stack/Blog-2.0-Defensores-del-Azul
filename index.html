@@ -3,602 +3,239 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Club Defensores del Azul | Blog 2.0</title>
+
+<title>Club Defensores del Azul | Del territorio al dato</title>
+
 <meta name="description" content="Club Defensores del Azul - Institución Educativa Pueblo Rico, Neira, Caldas. Conocemos, investigamos y protegemos el agua.">
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
+
+:root{
+--azul:#07566b;
+--azul2:#0b7f91;
+--verde:#23865b;
+--verde2:#62b879;
+--agua:#e9f7f7;
+--fondo:#f7fbfa;
+--texto:#173b45;
+--blanco:#ffffff;
+--borde:#dceceb;
+--sombra:0 10px 30px rgba(9,66,75,.10);
+}
+
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
 body{
 font-family:Arial,Helvetica,sans-serif;
-background:#f4faf9;
-color:#173f46;
-line-height:1.6
+background:var(--fondo);
+color:var(--texto);
+line-height:1.65;
 }
-a{text-decoration:none;color:inherit}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+img{
+max-width:100%;
+display:block;
+}
+
+/* CABECERA */
 
 header{
 position:sticky;
 top:0;
-z-index:100;
-background:#ffffffee;
+z-index:1000;
+background:rgba(255,255,255,.97);
 backdrop-filter:blur(10px);
-border-bottom:1px solid #d9e9e7
+border-bottom:1px solid var(--borde);
 }
 
 .nav{
-max-width:1150px;
+max-width:1180px;
 margin:auto;
-padding:15px 20px;
+padding:12px 20px;
 display:flex;
 align-items:center;
 justify-content:space-between;
-gap:20px
+gap:18px;
 }
 
-.logo{
-font-size:21px;
+.brand{
+display:flex;
+align-items:center;
+gap:9px;
+color:var(--azul);
 font-weight:800;
-color:#056b78
+font-size:18px;
+}
+
+.brand-mark{
+font-size:30px;
 }
 
 .menu{
 display:flex;
-gap:18px;
-flex-wrap:wrap
+gap:13px;
+flex-wrap:wrap;
+justify-content:flex-end;
 }
 
 .menu a{
+font-size:13px;
 font-weight:700;
-color:#31585d
+color:#31545b;
+padding:7px 3px;
 }
 
-.menu a:hover{color:#008a96}
+.menu a:hover{
+color:var(--azul2);
+}
+
+/* HERO */
 
 .hero{
-background:linear-gradient(135deg,#063c4b,#087d89 60%,#38aaa0);
 color:white;
-padding:90px 20px
+background:
+linear-gradient(120deg,rgba(3,54,69,.95),rgba(6,126,140,.82)),
+url('IMG-20260511-WA0085.jpg') center/cover;
+padding:95px 20px 90px;
 }
 
 .hero-inner{
-max-width:1150px;
-margin:auto
+max-width:1180px;
+margin:auto;
 }
 
-.tag{
+.eyebrow{
 text-transform:uppercase;
 letter-spacing:2px;
-font-weight:bold;
-font-size:14px
+font-size:13px;
+font-weight:800;
 }
 
 .hero h1{
-font-size:clamp(44px,8vw,78px);
-line-height:1;
-margin:15px 0
+font-size:clamp(48px,8vw,88px);
+line-height:.98;
+margin:15px 0 20px;
+}
+
+.hero h1 span{
+color:#aee8dd;
 }
 
 .hero p{
 font-size:clamp(19px,3vw,27px);
-max-width:800px
+max-width:850px;
+}
+
+.hero .lead{
+font-size:17px;
+max-width:760px;
+margin-top:18px;
 }
 
 .btn{
 display:inline-block;
 margin-top:25px;
 padding:13px 22px;
-background:white;
-color:#056b78;
 border-radius:30px;
-font-weight:bold
+background:white;
+color:var(--azul);
+font-weight:800;
 }
 
+.btn.dark{
+background:var(--azul);
+color:white;
+}
+
+.hero-badges{
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+margin-top:25px;
+}
+
+.badge{
+padding:8px 13px;
+border:1px solid rgba(255,255,255,.35);
+border-radius:30px;
+background:rgba(255,255,255,.12);
+font-weight:700;
+font-size:13px;
+}
+
+/* MENU RAPIDO */
+
+.quick{
+max-width:1180px;
+margin:-34px auto 0;
+padding:0 20px;
+position:relative;
+}
+
+.quick-grid{
+background:white;
+border-radius:22px;
+box-shadow:var(--sombra);
+display:grid;
+grid-template-columns:repeat(8,1fr);
+overflow:hidden;
+}
+
+.quick a{
+padding:18px 8px;
+text-align:center;
+border-right:1px solid #e5efee;
+font-size:12px;
+font-weight:800;
+color:var(--azul);
+}
+
+.quick a:last-child{
+border:0;
+}
+
+.quick i{
+display:block;
+font-style:normal;
+font-size:27px;
+margin-bottom:4px;
+}
+
+/* SECCIONES */
+
 .section{
-max-width:1150px;
+max-width:1180px;
 margin:auto;
-padding:70px 20px
+padding:75px 20px;
+}
+
+.section.alt{
+background:var(--agua);
+}
+
+.section-head{
+max-width:850px;
+margin-bottom:34px;
 }
 
 .section h2{
-font-size:38px;
-color:#056b78;
-margin-bottom:15px
+font-size:clamp(30px,5vw,44px);
+line-height:1.1;
+color:var(--azul);
+margin-bottom:14px;
 }
 
-.center{
-text-align:center;
-max-width:850px;
-margin:auto
-}
-
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-gap:22px;
-margin-top:35px
-}
-
-.card{
-background:white;
-padding:28px;
-border-radius:22px;
-box-shadow:0 8px 25px #174a4a15;
-border:1px solid #dfefed
-}
-
-.card .icon{
-font-size:40px;
-margin-bottom:8px
-}
-
-.card h3{
-font-size:22px;
-color:#056b78;
-margin-bottom:8px
-}
-
-.band{
-background:#e2f4f0
-}
-
-.stats{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:15px;
-margin-top:35px
-}
-
-.stat{
-background:white;
-padding:22px;
-border-radius:18px;
-text-align:center
-}
-
-.stat strong{
-display:block;
-font-size:35px;
-color:#07828d
-}
-
-.timeline{
-margin-top:35px;
-border-left:4px solid #72c7bd;
-padding-left:25px
-}
-
-.timeline article{
-margin-bottom:28px
-}
-
-.timeline b{
-color:#087d89
-}
-
-.gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:18px;
-margin-top:30px
-}
-
-.gallery img{
-width:100%;
-height:220px;
-object-fit:cover;
-border-radius:18px;
-background:#d9eeee
-}
-
-.data-box{
-background:white;
-padding:30px;
-border-radius:22px;
-margin-top:30px;
-border:1px solid #dcebea
-}
-
-.pill{
-display:inline-block;
-padding:8px 14px;
-margin:5px;
-border-radius:20px;
-background:white;
-border:1px solid #a8d8d3;
-font-weight:bold
-}
-
-footer{
-background:#063c4b;
-color:white;
-text-align:center;
-padding:45px 20px
-}
-
-@media(max-width:700px){
-.menu{gap:9px;font-size:14px}
-.stats{grid-template-columns:repeat(2,1fr)}
-.hero{padding:65px 20px}
-}
-</style>
-</head>
-
-<body>
-
-<header>
-<nav class="nav">
-<a href="#inicio" class="logo">💧 Defensores del Azul</a>
-
-<div class="menu">
-<a href="#territorio">Territorio</a>
-<a href="#investigacion">Investigación</a>
-<a href="#datos">Datos</a>
-<a href="#proyectos">Proyectos</a>
-<a href="#galeria">Galería</a>
-<a href="#club">El Club</a>
-</div>
-</nav>
-</header>
-
-<main>
-
-<section class="hero" id="inicio">
-<div class="hero-inner">
-
-<div class="tag">
-Institución Educativa Pueblo Rico · Neira, Caldas
-</div>
-
-<h1>Del territorio<br>al dato.</h1>
-
-<p>
-<strong>Conocemos, investigamos y protegemos el agua.</strong><br>
-Una experiencia educativa que une territorio, biodiversidad,
-tecnología, investigación y participación estudiantil.
-</p>
-
-<a class="btn" href="#territorio">Explorar nuestro proyecto ↓</a>
-
-</div>
-</section>
-
-
-<section class="section">
-
-<div class="center">
-
-<h2>Bienvenidos al Blog 2.0</h2>
-
-<p>
-El Club Defensores del Azul transforma la observación del territorio
-en conocimiento. Recorremos nuestros espacios naturales, observamos,
-registramos, investigamos y compartimos información para contribuir
-al cuidado del agua y de la biodiversidad.
-</p>
-
-</div>
-
-<div class="stats">
-
-<div class="stat">
-<strong>💧</strong>
-Agua
-</div>
-
-<div class="stat">
-<strong>🌿</strong>
-Biodiversidad
-</div>
-
-<div class="stat">
-<strong>📍</strong>
-Territorio
-</div>
-
-<div class="stat">
-<strong>📊</strong>
-Datos
-</div>
-
-</div>
-
-</section>
-
-
-<section class="band" id="territorio">
-
-<div class="section">
-
-<h2>🌎 Nuestro territorio</h2>
-
-<p>
-Nuestro trabajo se desarrolla en el territorio de Neira, Caldas,
-reconociendo humedales, microcuencas, paisajes, ecosistemas y
-biodiversidad.
-</p>
-
-<div class="cards">
-
-<article class="card">
-<div class="icon">💧</div>
-<h3>Humedal Llanitos</h3>
-<p>
-Espacio de observación e investigación donde reconocemos
-características ambientales, vegetación y condiciones del territorio.
-</p>
-</article>
-
-<article class="card">
-<div class="icon">💧</div>
-<h3>Humedal Casas Viejas</h3>
-<p>
-Lugar de exploración para conocer la biodiversidad y fortalecer
-la protección de los ecosistemas asociados al agua.
-</p>
-</article>
-
-<article class="card">
-<div class="icon">🗺️</div>
-<h3>Microcuencas</h3>
-<p>
-Observamos las relaciones entre suelo, agua, vegetación,
-paisaje y actividades humanas.
-</p>
-</article>
-
-</div>
-</div>
-</section>
-
-
-<section class="section" id="investigacion">
-
-<h2>🔬 Del territorio al dato</h2>
-
-<p>
-Nuestro proyecto busca pasar de la simple observación a la
-investigación escolar. Cada recorrido puede convertirse en
-información útil para comprender y proteger nuestro territorio.
-</p>
-
-<div class="cards">
-
-<article class="card">
-<div class="icon">📱</div>
-<h3>CyberTracker</h3>
-<p>
-Utilizamos herramientas digitales para registrar observaciones
-de campo, ubicación, fotografías y características de los individuos
-vegetales y de los sitios estudiados.
-</p>
-</article>
-
-<article class="card">
-<div class="icon">📍</div>
-<h3>Trabajo de campo</h3>
-<p>
-Los estudiantes participan en recorridos, inventarios, observaciones
-y actividades de reconocimiento ambiental.
-</p>
-</article>
-
-<article class="card">
-<div class="icon">🔎</div>
-<h3>Investigación escolar</h3>
-<p>
-Los registros permiten formular preguntas, organizar información,
-analizar resultados y proponer acciones de protección.
-</p>
-</article>
-
-</div>
-</section>
-
-
-<section class="band" id="datos">
-
-<div class="section">
-
-<h2>📊 Datos que cuentan una historia</h2>
-
-<p>
-La tecnología nos permite convertir las observaciones del territorio
-en datos que pueden ser organizados, analizados y representados
-espacialmente.
-</p>
-
-<div class="data-box">
-
-<h3>🗺️ CyberTracker + Google Earth</h3>
-
-<p>
-Los registros obtenidos mediante CyberTracker pueden convertirse
-en insumos para la cartografía y la visualización del territorio
-en herramientas como Google Earth Pro.
-</p>
-
-<br>
-
-<a class="btn"
-href="CyberTracker_PuebloRico_GoogleEarth_2026.csv">
-📥 Consultar archivo de datos CSV
-</a>
-
-</div>
-
-</div>
-</section>
-
-
-<section class="section" id="proyectos">
-
-<h2>🚀 Nuestros proyectos</h2>
-
-<div class="cards">
-
-<article class="card">
-<div class="icon">💧</div>
-<h3>Inventario de humedales</h3>
-<p>
-Reconocimiento, registro y documentación de los humedales
-presentes en nuestro territorio.
-</p>
-</article>
-
-<article class="card">
-<div class="icon">🌱</div>
-<h3>Laboratorio vivo</h3>
-<p>
-Espacio de aprendizaje práctico relacionado con agua, suelo,
-biodiversidad, producción sostenible y educación ambiental.
-</p>
-</article>
-
-<article class="card">
-<div class="icon">🏆</div>
-<h3>Expo Clubs 2026</h3>
-<p>
-Del territorio al dato: conocemos, investigamos y protegemos
-el agua.
-</p>
-</article>
-
-<article class="card">
-<div class="icon">🛡️</div>
-<h3>Defensores del Azul</h3>
-<p>
-Estudiantes protagonistas de una experiencia que integra
-educación ambiental, tecnología y participación.
-</p>
-</article>
-
-</div>
-
-
-<div class="timeline">
-
-<article>
-<b>01 · OBSERVAMOS</b>
-<p>Reconocemos nuestro territorio y sus fuentes de agua.</p>
-</article>
-
-<article>
-<b>02 · REGISTRAMOS</b>
-<p>Convertimos las observaciones en información mediante herramientas digitales.</p>
-</article>
-
-<article>
-<b>03 · INVESTIGAMOS</b>
-<p>Analizamos los datos y construimos conocimiento escolar.</p>
-</article>
-
-<article>
-<b>04 · PROTEGEMOS</b>
-<p>Transformamos lo aprendido en acciones de cuidado.</p>
-</article>
-
-</div>
-
-</section>
-
-
-<section class="band" id="galeria">
-
-<div class="section">
-
-<h2>📷 Galería del territorio</h2>
-
-<p>
-Imágenes de nuestras experiencias, recorridos y actividades
-de investigación.
-</p>
-
-<div class="gallery">
-
-<img src="IMG-20260511-WA0085.jpg" alt="Experiencia del Club Defensores del Azul">
-
-<img src="IMG-20260511-WA0088.jpg" alt="Actividad ambiental">
-
-<img src="IMG-20260727-WA0024(1).jpg" alt="Trabajo de campo">
-
-</div>
-
-</div>
-
-</section>
-
-
-<section class="section" id="club">
-
-<div class="center">
-
-<h2>🛡️ Somos Defensores del Azul</h2>
-
-<p>
-Somos un club escolar comprometido con el conocimiento,
-la investigación y la protección del agua.
-
-Los estudiantes son protagonistas de una experiencia que
-une educación ambiental, territorio, tecnología y participación.
-</p>
-
-<br>
-
-<h3>“Conocer para proteger.”</h3>
-
-</div>
-
-<div style="text-align:center;margin-top:30px">
-
-<span class="pill">Institución Educativa Pueblo Rico</span>
-<span class="pill">SENA</span>
-<span class="pill">Gobernación de Caldas</span>
-<span class="pill">Alcaldía de Neira</span>
-<span class="pill">UMATA</span>
-<span class="pill">Comité de Cafeteros</span>
-<span class="pill">Comunidad</span>
-
-</div>
-
-</section>
-
-
-<section class="band">
-
-<div class="section center">
-
-<h2>🤝 Educación que protege el territorio</h2>
-
-<p>
-El proyecto articula educación ambiental, investigación escolar,
-tecnología, biodiversidad y participación comunitaria para que
-nuestros estudiantes conozcan su territorio y se conviertan
-en protagonistas de su protección.
-</p>
-
-</div>
-
-</section>
-
-</main>
-
-
-<footer>
-
-<h2>💧 Club Defensores del Azul</h2>
-
-<p>Institución Educativa Pueblo Rico · Neira, Caldas</p>
-
-<p>
-Del territorio al dato: conocemos, investigamos y protegemos el agua.
-</p>
-
-<br>
-
-<p>© 2026 · Conocer para proteger.</p>
-
-</footer>
-
-</body>
-</html>
+.section
